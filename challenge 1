@@ -1,0 +1,33 @@
+#". #Desafío: Creador de Acrónimos
+#Objetivo: Escribe una función que genere un acrónimo a partir de una frase dada.
+#Especificaciones:
+#Entrada: Una cadena de texto (frase) que puede contener varias palabras.
+#Salida: Un acrónimo formado por la primera letra de cada palabra en mayúscula.
+#Ejemplo:
+#Entrada: "Sistema de Gestión de Contenidos"
+#Salida: "SGC"
+#Reglas:
+#Ignora palabras cortas como "de", "la", "y", "el", etc. (puedes crear una lista de estas palabras).
+#Asegúrate de que la función pueda manejar frases con múltiples espacios entre palabras y también sin espacios.
+#Ejemplo de uso: 
+
+
+def crear_acronimo(cadena):
+   excepciones = ["de", "la", "y", "el", "a", "en", "por", "con"]
+
+   acronimo = "".join([palabra[0].upper() for palabra in cadena.split() if palabra.lower() not in excepciones])
+    
+
+   return acronimo
+
+entrada=input("una cadena de frases")
+print("aqui esta el acronimo:",crear_acronimo(entrada))
+
+
+##Challenge acabado 
+
+
+
+
+
+
